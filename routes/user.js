@@ -6,7 +6,6 @@ const router = express.Router()
 
 router.post(`/signup`, async (req, res) => {
     try {
-        console.log(req.body);
         if (req.body.email === undefined || req.body.email === null || req.body.email === '') {
             return res.status(400).send({message: "Email is required"})
         }
